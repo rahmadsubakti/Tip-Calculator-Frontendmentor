@@ -1,0 +1,21 @@
+@import '/src/styles/variables';
+
+.named-container {
+  position: relative;
+  margin-bottom: 1.3rem;
+
+  p {
+    color: $grayish-cyan;
+    word-spacing: -0.12rem;
+    margin-bottom: 0.3rem;
+  }
+}
+
+.with-err {
+  .err-msg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: red !important;
+  }  
+}

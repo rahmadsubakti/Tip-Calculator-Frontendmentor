@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+@import './variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  border: 0;
+  font-family: 'Space Mono', monospace;
+}
+
+html {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+p {
+  font-size: 0.7rem;
+}
+
+main {
+  background-color: $light-grayish-cyan;
+
+  .logo {
+    margin: 2rem 50% 1.4rem;
+    transform: translateX(-50%);
+  }
+}

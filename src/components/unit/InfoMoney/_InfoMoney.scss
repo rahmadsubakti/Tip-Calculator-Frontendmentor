@@ -1,0 +1,27 @@
+@import '/src/styles/variables';
+
+
+.money-info {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  p {
+    color: $white;
+    text-align: left;
+    letter-spacing: -0.02rem;
+    line-height: 0.87rem;
+    span {
+      color: $grayish-cyan;
+      font-size: 0.4rem;
+      word-spacing: 0.16rem;
+      letter-spacing: 0.07rem;
+    }
+  }
+
+  h1 {
+    font-size: 1.15rem;
+    letter-spacing: 0.05rem;
+    color: $strong-cyan;
+  }
+}

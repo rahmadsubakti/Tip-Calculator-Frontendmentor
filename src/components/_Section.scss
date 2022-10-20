@@ -1,0 +1,26 @@
+@import '/src/styles/variables';
+
+.calculator {
+  padding: 0.3rem;
+  margin-bottom: 1.1rem;
+
+  .named-container:last-of-type {
+    margin-bottom: 0;
+  }
+}
+.result {
+  background-color: $very-dark-cyan;
+  padding: 1.6rem 0.9rem 1rem 1rem;
+  border-radius: 12px;
+
+  .reset-btn {
+    margin-top: 0.43rem;
+    width: 100%;
+    padding: 0.4rem 0;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    background-color: $strong-cyan;
+    color: $very-dark-cyan;
+  }
+}
