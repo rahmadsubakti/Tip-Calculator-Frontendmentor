@@ -22,8 +22,10 @@ main {
   background-color: $light-grayish-cyan;
 
   .logo {
-    margin: 2rem 50% 1.4rem;
-    transform: translateX(-50%);
+    padding-top: 2rem;
+    margin-bottom: 1.4rem;
+    display: flex;
+    justify-content: center;
   }
 }
 
