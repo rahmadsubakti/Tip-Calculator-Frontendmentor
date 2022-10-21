@@ -6,9 +6,9 @@ import './_Section.scss';
 const CalcSection = ({handleBill, handleTip, handleNumPeople}) => {
   return (
     <section className="calculator">
-      <BillContainer handleChange={handleBill}/>
-      <TipContainer handleChange={handleTip} />
-      <NumOfPeopleContainer handleValueChange={handleNumPeople}/>
+      <BillContainer />
+      <TipContainer />
+      <NumOfPeopleContainer />
     </section>
   )
 }

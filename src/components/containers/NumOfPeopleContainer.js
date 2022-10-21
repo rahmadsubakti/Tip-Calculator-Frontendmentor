@@ -1,22 +1,25 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import { NamedContainer, CustomTextBox } from "../unit";
+import { handleContext } from "components/AppContext";
 
 import person from 'assets/images/icon-person.svg';
 
 
-function NumOfPeopleContainer({handleValueChange}) {
+function NumOfPeopleContainer() {
   const [errZero, setErrZero] = useState(false);
+
+  const handleNumPeople = useContext(handleContext).handleNumPeople;
 
   const handleChange = e => {
     let value = e.target.value;
-    if (value == 0) {
+    if (value === 0) {
       setErrZero(errZero => true);
     } else {
       setErrZero(errZero => false);
       //Remove this if logic
-      if (handleValueChange) {
-        handleValueChange(value);
+      if (handleNumPeople) {
+        handleNumPeople(value);
       }
     }
   }

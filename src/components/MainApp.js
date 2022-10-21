@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 import {CalcSection, ResultSection} from "./Section";
+import { handleContext, stateContext } from "./AppContext";
 
 import './_MainApp.scss';
 
@@ -11,7 +12,7 @@ const MainApp = () => {
 
   const handleBill = e => {
     let value = e.target.value;
-    setBill(bill => value);
+    setBill(bill => parseFloat(value));
   }
 
   const handleTip = e => {
@@ -19,7 +20,7 @@ const MainApp = () => {
     let tipContainer = document.querySelector('.tips');
     let value = e.target.value;
 
-    if (typeEl == "radio") {
+    if (typeEl === "radio") {
       const customTip = tipContainer.querySelector('[type="number"]');
       customTip.value = '';
 
@@ -32,17 +33,42 @@ const MainApp = () => {
       }
     }
     
-    setTip(tip => value);
+    setTip(tip => parseFloat(value));
   }
 
   const handleNumPeople = value => {
-    setNumPeople(numPeople => value);
+    setNumPeople(numPeople => parseInt(value));
   }
+
+  const handleReset = () => {
+    setBill(bill => 0);
+    setTip(tip => 0);
+    setNumPeople(numPeople => '');
+  }
+
+  const states = {
+    "bill": bill,
+    "tip": tip,
+    "numPeople": numPeople,
+  }
+
+  const handlers = {
+    "handleBill": handleBill,
+    "handleTip": handleTip,
+    "handleNumPeople": handleNumPeople,
+    "handleReset": handleReset,
+  };
 
   return (
     <div className="main-app">
-      <CalcSection handleBill={handleBill} handleNumPeople={handleNumPeople} handleTip={handleTip} />
-      <ResultSection bill={bill} tip={tip} numPeople={numPeople} />
+      <handleContext.Provider value={handlers}>
+        <CalcSection />
+      </handleContext.Provider>
+      <handleContext.Provider value={handlers}>
+        <stateContext.Provider value={states}>
+          <ResultSection />
+        </stateContext.Provider>
+      </handleContext.Provider>
     </div>
   )
 }
