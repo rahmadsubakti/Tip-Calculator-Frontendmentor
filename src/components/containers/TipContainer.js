@@ -13,7 +13,7 @@ const TipContainer = () => {
     <NamedContainer name="Select Tip %" className="tip">
       <div className="tips">
       {tips.map(n => <CustomRadioBtn name="tip" value={n} handleChange={handleTip} />)}
-      <CustomTextBox initValue="Custom" handleChange={handleTip} id="custom-tip"/>
+      <CustomTextBox initValue="Custom" handleChange={handleTip}/>
       </div>
     </NamedContainer>
   )

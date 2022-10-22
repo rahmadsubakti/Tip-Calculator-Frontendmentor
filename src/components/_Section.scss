@@ -24,3 +24,24 @@
     color: $very-dark-cyan;
   }
 }
+
+@media screen and (min-width: 376px) {
+ .calculator {
+  padding: 0.5rem 0.73rem 0.5rem 0.63rem;
+  margin-bottom: 0;
+
+  .named-container:last-of-type {
+    margin-bottom: 0.1rem;
+  }
+ }
+ 
+ .result {
+  padding: 2.44rem 1.64rem 1.64rem 1.66rem;
+  display: flex;
+  flex-direction: column;
+
+  .reset-btn {
+    margin-top: auto;
+  }
+ }
+}

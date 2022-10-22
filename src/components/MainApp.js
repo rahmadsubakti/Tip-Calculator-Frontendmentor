@@ -29,6 +29,7 @@ const MainApp = () => {
       for (let i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
           radios[i].checked = false;
+          break;
         }
       }
     }
@@ -40,9 +41,30 @@ const MainApp = () => {
     setNumPeople(numPeople => parseInt(value));
   }
 
+  /*This function needs to be refactory since it's ugly*/
   const handleReset = () => {
+    // reset bill component
+    const billEl = document.querySelector('.bill');
+    const input = billEl.children[1].children[1];
+    input.value = '';
     setBill(bill => 0);
+
+    // reset tip component
+    const tipContainer = document.querySelector('.tips');
+    tipContainer.querySelector('[type="number"]').value = '';
+    const radios = tipContainer.querySelectorAll('[type="radio"]');
+    for (let i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        radios[i].checked = false;
+        break;
+      }
+    }
     setTip(tip => 0);
+
+    // reset numPeople Component
+    const numPeopleContainer = document.querySelector('.with-err'); // since i give name it
+    const input1 = numPeopleContainer.children[1].children[1];
+    input1.value = '';
     setNumPeople(numPeople => '');
   }
 

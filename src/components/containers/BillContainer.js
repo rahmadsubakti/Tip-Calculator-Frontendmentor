@@ -8,7 +8,7 @@ const BillContainer = () => {
   const handleBill = useContext(handleContext).handleBill;
 
   return (
-    <NamedContainer name="Bill" className="">
+    <NamedContainer name="Bill" className="bill">
       <CustomTextBox image={dollar} initValue="0" handleChange={handleBill} />
     </NamedContainer>
   )

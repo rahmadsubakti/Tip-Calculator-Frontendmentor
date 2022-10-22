@@ -18,12 +18,17 @@ p {
   font-size: 0.7rem;
 }
 
-main {
+#root {
   background-color: $light-grayish-cyan;
 
+}
+
+main {
+  position: relative;
+
   .logo {
-    padding-top: 2rem;
-    margin-bottom: 1.4rem;
+    padding-top: 2.1rem;
+    margin-bottom: 1.7rem;
     display: flex;
     justify-content: center;
   }
@@ -40,4 +45,19 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
   appearance: textfield;
+}
+
+@media screen and (min-width: 376px) {
+  #root {
+    width: 1440px; // change this to 100vh;
+    height: 1024px;
+    padding: 115px 260px 240px;
+  }
+
+  main {
+
+    .logo {
+      margin-bottom: 3.55rem;
+    }
+  }
 }

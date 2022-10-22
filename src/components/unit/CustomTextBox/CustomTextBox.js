@@ -13,7 +13,7 @@ function CustomTextBox({image, handleChange, initValue, id}) {
   return (
     <div className="text-container">
       {image && <img src={image} alt="" />}
-      <input type="number" placeholder={initValue} onChange={handleChange} id={id} min={0} onKeyPress={handleKeyPress} />
+      <input type="number" className={!image && "text"} placeholder={initValue} onChange={handleChange} min={0} onKeyPress={handleKeyPress} />
     </div>
   )
 }

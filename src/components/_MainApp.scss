@@ -5,3 +5,12 @@
   border-radius: 21px;
   padding: 1rem;
 }
+
+@media screen and (min-width: 376px) {
+  .main-app {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 1.27rem;
+    padding: 1.3rem 1.35rem;
+  }
+}

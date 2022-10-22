@@ -25,3 +25,18 @@
     color: $strong-cyan;
   }
 }
+
+@media screen and (min-width: 376px) {
+  .money-info {
+
+    &:first-of-type {
+      margin-bottom: 2.2rem;
+    }
+
+    h1 {
+      line-height: 1.5rem;
+      font-size: 2.1rem;
+      letter-spacing: -0.1rem;
+    }
+  }
+}
