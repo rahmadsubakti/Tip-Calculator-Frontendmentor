@@ -30,7 +30,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [github](https://github.com/rahmadsubakti/Tip-Calculator-Frontendmentor)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [link](https://rahmad-subakti-tip-calculator-frontendmentor.vercel.app/)
 
 ## My process
 
